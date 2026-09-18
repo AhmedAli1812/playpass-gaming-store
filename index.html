@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b12" />
+    <meta name="description" content="PlayPass — متجر اشتراكات الألعاب الرقمية." />
+    <title>PlayPass | اشتراكات الألعاب</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23090c14'/%3E%3Cpath d='M18 24h28l6 18c1 5-4 8-8 4l-6-6H26l-6 6c-4 4-9 1-8-4z' fill='%237c5cff'/%3E%3Cpath d='M23 29v9M18.5 33.5h9M40 31h.1M46 36h.1' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="announcement">تسليم فوري للطلبات الرقمية • دعم متاح يوميًا من 10 صباحًا إلى 12 منتصف الليل</div>
+
+    <div id="storeView" class="view">
+      <header class="store-header shell">
+        <a class="brand" href="#" aria-label="PlayPass الرئيسية"><span class="brand-mark">P</span><span>PLAY<span>PASS</span></span></a>
+        <nav class="main-nav" aria-label="التنقل الرئيسي">
+          <button class="nav-link active" data-scroll="products">المتجر</button>
+          <button class="nav-link" data-filter="playstation">PlayStation</button>
+          <button class="nav-link" data-filter="xbox">Xbox</button>
+          <button class="nav-link" data-filter="pc">PC</button>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-btn" id="searchToggle" aria-label="بحث"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></button>
+          <button class="cart-btn" id="cartOpen"><span>السلة</span><b id="cartCount">0</b></button>
+          <button class="admin-entry" id="adminEntry">لوحة التحكم</button>
+        </div>
+      </header>
+
+      <div class="search-panel shell" id="searchPanel" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+        <input id="searchInput" type="search" placeholder="ابحث عن اشتراك أو منصة..." aria-label="ابحث في المنتجات" />
+        <kbd>ESC</kbd>
+      </div>
+
+      <main>
+        <section class="hero shell">
+          <div class="hero-content">
+            <span class="eyebrow"><i></i> عالمك يبدأ هنا</span>
+            <h1>كل اشتراكاتك<br /><em>في مكان واحد</em></h1>
+            <p>اشحن لعبتك المفضلة واستلم كودك في دقائق. منتجات أصلية، دفع آمن، ودعم مصري سريع.</p>
+            <div class="hero-actions">
+              <button class="primary-btn" data-scroll="products">تصفح الاشتراكات</button>
+              <button class="ghost-btn" id="howItWorks">إزاي تشتري؟ <span>←</span></button>
+            </div>
+            <div class="trust-row">
+              <span><b>+1,200</b> عميل نشط</span><span><b>4.9/5</b> تقييم المتجر</span><span><b>فوري</b> تسليم رقمي</span>
+            </div>
+          </div>
+          <div class="hero-art" role="img" aria-label="عالم ألعاب مستقبلي">
+            <div class="hero-offer"><small>عرض الأسبوع</small><strong>خصم 15%</strong><span>على اشتراكات PC</span></div>
+          </div>
+        </section>
+
+        <section class="platforms shell" aria-label="المنصات المتاحة">
+          <button class="platform active" data-filter="all"><span>ALL</span> كل المنتجات</button>
+          <button class="platform" data-filter="playstation"><span>PS</span> PlayStation</button>
+          <button class="platform" data-filter="xbox"><span>X</span> Xbox</button>
+          <button class="platform" data-filter="pc"><span>PC</span> PC Gaming</button>
+          <button class="platform" data-filter="nintendo"><span>N</span> Nintendo</button>
+        </section>
+
+        <section class="catalog shell" id="products">
+          <div class="section-heading"><div><span class="eyebrow">الأكثر طلبًا</span><h2>اختار اشتراكك</h2></div><span id="resultsCount">6 منتجات</span></div>
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="steps shell" id="steps">
+          <div class="section-heading"><div><span class="eyebrow">ببساطة</span><h2>من الطلب للعب في 3 خطوات</h2></div></div>
+          <div class="step-grid">
+            <article><b>01</b><h3>اختار منتجك</h3><p>حدد المنصة والمدة المناسبة ليك.</p></article>
+            <article><b>02</b><h3>ادفع بأمان</h3><p>اختار وسيلة الدفع وكمل بياناتك.</p></article>
+            <article><b>03</b><h3>استلم فورًا</h3><p>الكود هيوصلك على الإيميل وواتساب.</p></article>
+          </div>
+        </section>
+      </main>
+
+      <footer><div class="shell footer-inner">
+        <div><a class="brand" href="#"><span class="brand-mark">P</span><span>PLAY<span>PASS</span></span></a><p>اشتراكات ألعاب أصلية، أسرع وأسهل.</p></div>
+        <div><b>روابط مهمة</b><a href="#products">المنتجات</a><a href="#steps">طريقة الشراء</a><a href="#">سياسة الاسترجاع</a></div>
+        <div><b>الدعم</b><a href="#">WhatsApp</a><a href="#">الأسئلة الشائعة</a><span>support@playpass.store</span></div>
+      </div></footer>
+    </div>
+
+    <div id="adminView" class="admin-view" hidden>
+      <aside class="admin-sidebar">
+        <a class="brand admin-brand" href="#"><span class="brand-mark">P</span><span>PLAY<span>PASS</span></span></a>
+        <div class="admin-label">الإدارة</div>
+        <nav aria-label="أقسام لوحة التحكم">
+          <button class="side-link active" data-admin-tab="overview"><span>⌁</span> نظرة عامة</button>
+          <button class="side-link" data-admin-tab="adminProducts"><span>◫</span> المنتجات</button>
+          <button class="side-link" data-admin-tab="orders"><span>≡</span> الطلبات <b>12</b></button>
+          <button class="side-link" data-admin-tab="customers"><span>◎</span> العملاء</button>
+          <button class="side-link" data-admin-tab="settings"><span>⚙</span> الإعدادات</button>
+        </nav>
+        <button class="back-store" id="backStore">← الرجوع للمتجر</button>
+        <div class="admin-profile"><span>MA</span><div><b>محمد أدهم</b><small>مدير المتجر</small></div><button aria-label="المزيد">•••</button></div>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <button class="mobile-menu" id="mobileMenu" aria-label="فتح القائمة">☰</button>
+          <div><h1 id="adminTitle">نظرة عامة</h1><p>الجمعة، 18 سبتمبر 2026</p></div>
+          <div class="admin-actions"><button class="icon-btn" aria-label="الإشعارات">♢<i></i></button><button class="primary-btn compact" id="addProduct">+ إضافة منتج</button></div>
+        </header>
+
+        <section class="admin-tab active" id="overview">
+          <div class="welcome-line"><div><h2>مساء الخير، محمد</h2><p>دي نظرة سريعة على أداء متجرك النهاردة.</p></div><select aria-label="الفترة"><option>آخر 30 يوم</option><option>آخر 7 أيام</option><option>السنة الحالية</option></select></div>
+          <div class="kpi-grid">
+            <article><span class="kpi-icon violet">↗</span><small>إجمالي المبيعات</small><strong>48,720 <em>ج.م</em></strong><p class="up">↑ 12.5% <span>عن الشهر الماضي</span></p></article>
+            <article><span class="kpi-icon cyan">▣</span><small>إجمالي الطلبات</small><strong>182</strong><p class="up">↑ 8.2% <span>عن الشهر الماضي</span></p></article>
+            <article><span class="kpi-icon orange">◉</span><small>اشتراكات نشطة</small><strong>1,248</strong><p class="up">↑ 18.9% <span>عن الشهر الماضي</span></p></article>
+            <article><span class="kpi-icon pink">%</span><small>معدل التحويل</small><strong>4.8%</strong><p class="down">↓ 0.4% <span>عن الشهر الماضي</span></p></article>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="panel revenue-panel">
+              <div class="panel-head"><div><h3>المبيعات</h3><p>إجمالي الإيرادات اليومية</p></div><div class="legend"><i></i> هذا الشهر</div></div>
+              <div class="chart-wrap">
+                <div class="y-labels"><span>20k</span><span>15k</span><span>10k</span><span>5k</span><span>0</span></div>
+                <div class="chart-bars" aria-label="رسم بياني للمبيعات خلال الأسبوع"><div><i style="height:42%"></i><span>السبت</span></div><div><i style="height:62%"></i><span>الأحد</span></div><div><i style="height:50%"></i><span>الاثنين</span></div><div><i style="height:78%"></i><span>الثلاثاء</span></div><div><i style="height:68%"></i><span>الأربعاء</span></div><div><i style="height:92%"></i><span>الخميس</span></div><div><i style="height:83%"></i><span>الجمعة</span></div></div>
+              </div>
+            </article>
+            <article class="panel sales-split">
+              <div class="panel-head"><div><h3>المبيعات حسب المنصة</h3><p>توزيع آخر 30 يوم</p></div></div>
+              <div class="donut" aria-label="PlayStation 46%، Xbox 28%، PC 18%، Nintendo 8%"><div><strong>182</strong><span>طلب</span></div></div>
+              <ul><li><i class="ps"></i> PlayStation <b>46%</b></li><li><i class="xb"></i> Xbox <b>28%</b></li><li><i class="pc"></i> PC Gaming <b>18%</b></li><li><i class="ni"></i> Nintendo <b>8%</b></li></ul>
+            </article>
+          </div>
+
+          <article class="panel orders-panel">
+            <div class="panel-head"><div><h3>أحدث الطلبات</h3><p>آخر عمليات الشراء في المتجر</p></div><button class="text-btn" data-admin-tab="orders">عرض كل الطلبات ←</button></div>
+            <div class="table-wrap"><table><thead><tr><th>رقم الطلب</th><th>العميل</th><th>المنتج</th><th>القيمة</th><th>الحالة</th><th>التاريخ</th></tr></thead><tbody id="recentOrders"></tbody></table></div>
+          </article>
+        </section>
+
+        <section class="admin-tab" id="adminProducts">
+          <div class="tab-toolbar"><div class="toolbar-search"><span>⌕</span><input id="adminProductSearch" placeholder="ابحث باسم المنتج..." /></div><select><option>كل المنصات</option><option>PlayStation</option><option>Xbox</option><option>PC</option></select></div>
+          <article class="panel"><div class="table-wrap"><table><thead><tr><th>المنتج</th><th>المنصة</th><th>السعر</th><th>المبيعات</th><th>الحالة</th><th>إجراء</th></tr></thead><tbody id="adminProductTable"></tbody></table></div></article>
+        </section>
+
+        <section class="admin-tab" id="orders">
+          <div class="tab-toolbar"><div class="order-filters"><button class="active">الكل <b>182</b></button><button>جديد <b>12</b></button><button>مكتمل <b>164</b></button><button>ملغي <b>6</b></button></div><button class="ghost-btn small">تصدير CSV</button></div>
+          <article class="panel"><div class="table-wrap"><table><thead><tr><th>رقم الطلب</th><th>العميل</th><th>المنتج</th><th>القيمة</th><th>طريقة الدفع</th><th>الحالة</th><th>التاريخ</th></tr></thead><tbody id="allOrders"></tbody></table></div></article>
+        </section>
+
+        <section class="admin-tab" id="customers">
+          <div class="customer-summary"><article><small>إجمالي العملاء</small><strong>1,284</strong><span>+46 هذا الشهر</span></article><article><small>عملاء متكررون</small><strong>38%</strong><span>+5.2% نمو</span></article><article><small>متوسط قيمة العميل</small><strong>742 ج.م</strong><span>آخر 90 يوم</span></article></div>
+          <article class="panel"><div class="panel-head"><div><h3>أفضل العملاء</h3><p>حسب إجمالي قيمة المشتريات</p></div></div><div id="customerList" class="customer-list"></div></article>
+        </section>
+
+        <section class="admin-tab" id="settings">
+          <div class="settings-grid">
+            <article class="panel setting-card"><h3>إعدادات المتجر</h3><label><span><b>حالة المتجر</b><small>السماح للعملاء بإتمام الطلبات</small></span><input type="checkbox" class="switch" checked /></label><label><span><b>التسليم التلقائي</b><small>إرسال الأكواد فور نجاح الدفع</small></span><input type="checkbox" class="switch" checked /></label><label><span><b>إشعار المخزون المنخفض</b><small>التنبيه عند وصول المخزون إلى 5 أكواد</small></span><input type="checkbox" class="switch" checked /></label></article>
+            <article class="panel setting-card"><h3>بيانات التواصل</h3><label class="field">رقم واتساب<input value="+20 100 000 0000" /></label><label class="field">البريد الإلكتروني<input value="support@playpass.store" /></label><button class="primary-btn compact" id="saveSettings">حفظ التغييرات</button></article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="سلة التسوق">
+      <div class="drawer-head"><div><h2>سلة التسوق</h2><p id="cartSub">0 منتجات</p></div><button class="close-btn" id="cartClose" aria-label="إغلاق">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-summary"><div><span>الإجمالي</span><strong id="cartTotal">0 ج.م</strong></div><button class="primary-btn full" id="checkoutBtn">إتمام الطلب</button><small>الدفع مش مفعّل في البروتوتايب</small></div>
+    </aside>
+    <div class="backdrop" id="backdrop" hidden></div>
+
+    <dialog id="productDialog" class="product-dialog"><button class="close-btn dialog-close" aria-label="إغلاق">×</button><div id="productDialogContent"></div></dialog>
+    <dialog id="editDialog" class="edit-dialog">
+      <form method="dialog" id="productForm">
+        <div class="dialog-title"><div><span class="eyebrow">إدارة المنتج</span><h2 id="formTitle">إضافة منتج جديد</h2></div><button class="close-btn edit-dialog-close" type="button" aria-label="إغلاق">×</button></div>
+        <input type="hidden" id="editProductId" />
+        <div class="form-grid"><label>اسم المنتج<input id="formName" required placeholder="مثال: Game Pass Ultimate" /></label><label>المنصة<select id="formPlatform"><option value="playstation">PlayStation</option><option value="xbox">Xbox</option><option value="pc">PC Gaming</option><option value="nintendo">Nintendo</option></select></label><label>السعر بالجنيه<input id="formPrice" required type="number" min="1" placeholder="999" /></label><label>المدة<input id="formDuration" required placeholder="3 شهور" /></label></div>
+        <div class="dialog-actions"><button class="ghost-btn edit-dialog-close" type="button">إلغاء</button><button class="primary-btn" id="saveProduct" type="submit">حفظ المنتج</button></div>
+      </form>
+    </dialog>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
